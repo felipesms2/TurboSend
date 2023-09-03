@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('imports', function (Blueprint $table)
         {
             $table->id();
-            $table->string("username");
-            $table->float("user_id");
-            $table->string("access_hash");
-            $table->string("name");
-            $table->string("group_name");
-            $table->float("group_id");
+            $table->string("username")->nullable();
+            $table->float("user_id")->nullable();
+            $table->string("access_hash")->nullable();
+            $table->string("name")->nullable();
+            $table->string("group_name")->nullable();
+            $table->float("group_id")->nullable();
             $table->timestamps();
         });
     }

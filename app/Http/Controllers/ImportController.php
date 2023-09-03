@@ -69,8 +69,12 @@ class ImportController extends Controller
                 }
                 echo "\n";
             }
+            foreach ($dataToInsert as $d) {
+                $i = new Import;
+                $iC = $i::create($d);
+            }
 
-            dump($dataToInsert);
+            dump($i::all());
 
     }
 }

@@ -20,30 +20,33 @@ class ImportController extends Controller
     public function listFiles()
     {
         $countFile = 0;
-        $folderPath = '/root/d/projects/TelegramExports/all/';
-
+        // $folderPath = '/root/d/projects/TelegramExports/bkp/';
+        $folderPath = '/tmp/b/';
         // Get all files and folders in the specified folder
         $files = scandir($folderPath);
         // Remove . and .. from the list
         $files = array_diff($files, array('.', '..'));
         // Print the list of files
+        // return $files;
         foreach ($files as $file)
         {
-            $this->insertData($file);
+            echo "Começou $file \n";
+            $this->insertData($file, $folderPath);
             $countFile++;
+            echo "Terminou $file \n";
             if ($countFile>3)
-             {
-                die;
+            {
+                //die
             }
         }
     }
 
 
 
-    public function insertData()
+    public function insertData($filename, $folderPath)
     {
-        //  $file = fopen("/root/d/projects/TelegramExports/all/" . $filename ,"r");
-         $file = fopen("/root/d/projects/TelegramExports/all/9.ext","r");
+         $file = fopen($folderPath . $filename ,"r");
+        //  $file = fopen("/root/d/projects/TelegramExports/all/9.ext","r");
 
 
          if ($file) {
@@ -74,7 +77,7 @@ class ImportController extends Controller
                 $iC = $i::create($d);
             }
 
-            dump($i::all());
+            // dump($i::all());
 
     }
 }

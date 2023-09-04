@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Import;
+use App\Models\Send;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class ImportPolicy
+class SendPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class ImportPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Import $import): bool
+    public function view(User $user, Send $send): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class ImportPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Import $import): bool
+    public function update(User $user, Send $send): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class ImportPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Import $import): bool
+    public function delete(User $user, Send $send): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class ImportPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Import $import): bool
+    public function restore(User $user, Send $send): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class ImportPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Import $import): bool
+    public function forceDelete(User $user, Send $send): bool
     {
         //
     }

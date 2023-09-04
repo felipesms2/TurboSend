@@ -14,5 +14,5 @@ use App\Http\Controllers\ImportController;
 |
 */
 
-Route::get('/', [ImportController::class, 'insertData']);
+// Route::get('/', [ImportController::class, 'insertData']);
 Route::get('/', [ImportController::class, 'listFiles']);

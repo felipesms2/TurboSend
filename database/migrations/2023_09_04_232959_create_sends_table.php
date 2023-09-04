@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('sends', function (Blueprint $table) {
             $table->id();
+            $table->integer('subject_id');
+            $table->float('user_id');
             $table->timestamps();
         });
     }

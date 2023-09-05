@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSendRequest;
-use App\Http\Requests\UpdateSendRequest;
-use App\Models\Send;
+use App\Http\Requests\StoreSubjectRequest;
+use App\Http\Requests\UpdateSubjectRequest;
 use App\Models\Subject;
 
-class SendController extends Controller
+class SubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,26 +21,21 @@ class SendController extends Controller
      */
     public function create()
     {
-        $s = new Subject;
-        return $s::all();
-        $sendList = DB::table('imports')
-            ->where('use', 'John')
-            ->where('age', '>', 18)
-            ->get();
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSendRequest $request)
+    public function store(StoreSubjectRequest $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Send $send)
+    public function show(Subject $subject)
     {
         //
     }
@@ -49,7 +43,7 @@ class SendController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Send $send)
+    public function edit(Subject $subject)
     {
         //
     }
@@ -57,7 +51,7 @@ class SendController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSendRequest $request, Send $send)
+    public function update(UpdateSubjectRequest $request, Subject $subject)
     {
         //
     }
@@ -65,7 +59,7 @@ class SendController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Send $send)
+    public function destroy(Subject $subject)
     {
         //
     }
